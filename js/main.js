@@ -1,18 +1,3 @@
-const searchEl = document.querySelector('.search');
-const searchInputEl = searchEl.querySelector('input');
-
-searchEl.addEventListener('click', ()=>{
-  searchInputEl.focus();
-});
-searchInputEl.addEventListener('focus', ()=>{
-  searchEl.classList.add('focused');
-  searchInputEl.setAttribute('placeholder', '통합검색');
-});
-searchInputEl.addEventListener('blur', ()=>{
-  searchEl.classList.remove('focused');
-  searchInputEl.removeAttribute('placeholder');
-});
-
 const badgeEl = document.querySelector('header .badges');
 const toTopEl = document.querySelector("#to-top");
 // loadash에서 제공하는 기능을 사용하여 스크롤 함수에 딜레이를 줌
@@ -135,6 +120,3 @@ spyEls.forEach(spyEl => {
     .setClassToggle(spyEl, 'show')    // (클래스를 토글할 요소, 넣었다 뺐다(토글)할 클래스이름)
     .addTo(new ScrollMagic.Controller());   //ScrollMagic에서 우리가 추가한 옵션들을 내부의 컨트롤러에 내용을 할당해서 실제로 동작할 수 있는 구조를 만들어 주는 용도
 });
-
-const thisYear = document.querySelector(".this-year");
-thisYear.textContent = new Date().getFullYear();
