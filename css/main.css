@@ -320,6 +320,7 @@ header .badges .badge{
 }
 .notice .notice-line{
   position: relative;
+  overflow: hidden;
 }
 .notice .notice-line .bg-left{
   position: absolute;
